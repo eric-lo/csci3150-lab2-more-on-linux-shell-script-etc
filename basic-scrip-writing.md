@@ -407,7 +407,7 @@ we have two functions. The first one named`addition`adds up the first two input 
 
 After executing it, you get "1+2=3" printed.
 
-We can use`addition "$@"`to pass the input arguments to the function. For example in [function2.sh](https://eric-lo.github.io/3150/3-Script/code/function2.sh),
+We can use`addition "$@"`to pass the input arguments to the function. For example in [function2.sh](https://github.com/eric-lo/lab3-code/blob/master/function2.sh),
 
 ## Examples on Content Processing {#examples-on-content-processing}
 
@@ -444,7 +444,7 @@ we may use the command`awk`as follows
 
 This command first pipes the string output by`echo`as the input of`awk`. Then,`awk`takes the character specified after the option`-F`as a delimiter to break the string.`awk`prints the first field \(`$1`\) and the third field \(`$3`\), with a space \(`" "`\) in between.
 
-Given a comma separated value \(csv\) file [data.csv](https://eric-lo.github.io/3150/3-Script/code/data.csv), we may list only the first and third column of the file using the following script [process\_csv.sh](https://github.com/eric-lo/lab3-code/blob/master/process_csv.sh),
+Given a comma separated value \(csv\) file [data.csv](https://github.com/eric-lo/lab3-code/blob/master/data.csv), we may list only the first and third column of the file using the following script [process\_csv.sh](https://github.com/eric-lo/lab3-code/blob/master/process_csv.sh),
 
 ```
 #!/bin/bash 

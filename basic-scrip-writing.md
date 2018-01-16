@@ -1,6 +1,6 @@
 ## Elements in Bash Scripts {#elements-in-bash-scripts}
 
-So far, we have been executing commands inside the Bash shell. To create the simplest Bash _script_, you may gather a list of commands, put it into a file, e.g.[`myscript.sh`](https://eric-lo.github.io/3150/3-Script/code/myscript.sh), and then execute`bash ./myscript.sh`.
+So far, we have been executing commands inside the Bash shell. To create the simplest Bash _script_, you may gather a list of commands, put it into a file, e.g.[`myscript.sh`](https://github.com/eric-lo/lab3-code/blob/master/myscript.sh), and then execute`bash ./myscript.sh`.
 
 Nevertheless, we can do more than executing commands sequentially and independently, e.g. establish a control flow for automating repeated tasks. Let us learn the basic elements for writing Bash scripts.
 
@@ -46,7 +46,7 @@ Other than assigning a value, we may "grow" a variable by appending values using
 
 and`mystr`now contains "csci3150".
 
-To retrieve the value of a variable, we use the syntax`${variable name}`. The`$`means value retrieval, while`{}`is used to separate the variable name from other characters. The following script [variable.sh](https://eric-lo.github.io/3150/3-Script/code/variable.sh) shows an example on appending values to a variable, and when`{}`is necessary.
+To retrieve the value of a variable, we use the syntax`${variable name}`. The`$`means value retrieval, while`{}`is used to separate the variable name from other characters. The following script [variable.sh](https://github.com/eric-lo/lab3-code/blob/master/variable.sh) shows an example on appending values to a variable, and when`{}`is necessary.
 
 ```
 #!/bin/bash
@@ -98,7 +98,7 @@ To get the keys used in the array,
 
 `${!myarray[@]}`
 
-Look into and execute [array.sh](https://eric-lo.github.io/3150/3-Script/code/array.sh) which includes examples on the usage listed above.
+Look into and execute [array.sh](https://github.com/eric-lo/lab3-code/blob/master/array.sh) which includes examples on the usage listed above.
 
 #### Strings {#strings}
 
@@ -106,7 +106,7 @@ Strings can be though as an array of characters, and we may get its length by
 
 `${#mystr}`
 
-Also, the string can be split as if an array, see [string.sh](https://eric-lo.github.io/3150/3-Script/code/string.sh) for an example.
+Also, the string can be split as if an array, see [string.sh](https://github.com/eric-lo/lab3-code/blob/master/string.sh) for an example.
 
 ```
 #!/bin/bash 
@@ -160,7 +160,7 @@ or
 
 **if **_expression _**then **_statement _**elif **_expression _**then **_statement _**else **_statement _**fi**
 
-Let illustrate the syntax with an example [condition.sh](https://eric-lo.github.io/3150/3-Script/code/condition.sh),
+Let illustrate the syntax with an example [condition.sh](https://github.com/eric-lo/lab3-code/blob/master/condition.sh),
 
 ```
 #!/bin/bash 
@@ -251,7 +251,7 @@ The format is
 
 **for **item **in **list **do **_statements _**done**
 
-An example [forloop.sh](https://eric-lo.github.io/3150/3-Script/code/forloop.sh),
+An example [forloop.sh](https://github.com/eric-lo/lab3-code/blob/master/forloop.sh),
 
 ```
 #!/bin/bash 
@@ -275,7 +275,7 @@ The format is
 
 **while **_expression _**do **_statements _**done**
 
-An example [whileloop.sh](https://eric-lo.github.io/3150/3-Script/code/whileloop.sh),
+An example [whileloop.sh](https://github.com/eric-lo/lab3-code/blob/master/whileloop.sh),
 
 ```
 #!/bin/bash 
@@ -298,7 +298,7 @@ The input arguments are obtainable from`$@`.
 
 The number of arguments is obtainable from`$#`.
 
-To specify the _n_-th argument, use`$n`, e.g. first argument is`$1`.`$0`is a special argument that stores the name of the script. For example, this script \([argument.sh](https://eric-lo.github.io/3150/3-Script/code/argument.sh)\) prints the arguments to the script.
+To specify the _n_-th argument, use`$n`, e.g. first argument is`$1`.`$0`is a special argument that stores the name of the script. For example, this script \([argument.sh](https://github.com/eric-lo/lab3-code/blob/master/argument.sh)\) prints the arguments to the script.
 
 ```
 #!/bin/bash 
@@ -329,7 +329,7 @@ Note that the syntax`$(command)`means executing`command`\(which is different fro
 
 The exit status of the last executed command is always stored in`$?`.
 
-See the following script, [capture.sh](https://eric-lo.github.io/3150/3-Script/code/capture.sh), which includes examples on the above usage,
+See the following script, [capture.sh](https://github.com/eric-lo/lab3-code/blob/master/capture.sh), which includes examples on the above usage,
 
 ```
 #!/bin/bash 
@@ -349,7 +349,7 @@ echo "hello_world"; echo "echo gives $?"
 
 #### Go through a file
 
-We may loop through a file using a while-loop \([file\_displayer.sh](https://eric-lo.github.io/3150/3-Script/code/file_displayer.sh)\),
+We may loop through a file using a while-loop \([file\_displayer.sh](https://github.com/eric-lo/lab3-code/blob/master/file_displayer.sh)\),
 
 ```
 #!/bin/bash 
@@ -383,7 +383,7 @@ The format is
 
 **function **function\_name **{ **_statements _**}**
 
-For example in [function.sh](https://eric-lo.github.io/3150/3-Script/code/function.sh),
+For example in [function.sh](https://github.com/eric-lo/lab3-code/blob/master/function.sh),
 
 ```
 #!/bin/bash 
@@ -415,7 +415,7 @@ We can use`addition "$@"`to pass the input arguments to the function. For exampl
 
 `IFS`stands for "_Internal Field Separator_", which is an environment variable that determines boundaries of words, i.e., it contains word _delimiters_. By default, the delimiters are space, tab, and newline character.
 
-We may change`IFS`during runtime. For example, to print only words between full-stops \(.\), we may assign a full-stop to`IFS`, see [ifs.sh](https://eric-lo.github.io/3150/3-Script/code/ifs.sh)
+We may change`IFS`during runtime. For example, to print only words between full-stops \(.\), we may assign a full-stop to`IFS`, see [ifs.sh](https://github.com/eric-lo/lab3-code/blob/master/ifs.sh)
 
 ```
 #!/bin/bash 
@@ -444,7 +444,7 @@ we may use the command`awk`as follows
 
 This command first pipes the string output by`echo`as the input of`awk`. Then,`awk`takes the character specified after the option`-F`as a delimiter to break the string.`awk`prints the first field \(`$1`\) and the third field \(`$3`\), with a space \(`" "`\) in between.
 
-Given a comma separated value \(csv\) file [data.csv](https://eric-lo.github.io/3150/3-Script/code/data.csv), we may list only the first and third column of the file using the following script [process\_csv.sh](https://eric-lo.github.io/3150/3-Script/code/process_csv.sh),
+Given a comma separated value \(csv\) file [data.csv](https://eric-lo.github.io/3150/3-Script/code/data.csv), we may list only the first and third column of the file using the following script [process\_csv.sh](https://github.com/eric-lo/lab3-code/blob/master/process_csv.sh),
 
 ```
 #!/bin/bash 
@@ -458,7 +458,7 @@ done < data.csv
 
 `wc`allows us to count characters \(with option`-c`\), words \(with option`-w`\) and lines \(with option`-l`\). It goes through files when they are provided. Otherwise, it processes input from`stdin`.
 
-For example in [file\_summary.sh](https://eric-lo.github.io/3150/3-Script/code/file_summary.sh),
+For example in [file\_summary.sh](https://github.com/eric-lo/lab3-code/blob/master/file_summary.sh),
 
 ```
 #!/bin/bash 
@@ -481,7 +481,7 @@ files are accepted as input arguments. For each file, the script prints the tota
 
 ### Variables {#variables}
 
-1. Run [global\_vs\_local.sh](https://eric-lo.github.io/3150/3-Script/code/global_vs_local.sh) and study the difference between global variables \(`global1`and`global2`\) and local variables \(`local1`\)
+1. Run [global\_vs\_local.sh](https://github.com/eric-lo/lab3-code/blob/master/global_vs_local.sh) and study the difference between global variables \(`global1`and`global2`\) and local variables \(`local1`\)
 
 ### Content processing {#content-processing}
 

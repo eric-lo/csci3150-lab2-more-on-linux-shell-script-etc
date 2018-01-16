@@ -148,7 +148,7 @@ Besides, you can increment/decrement counters using the operator`++`and`--`, e.g
 
 `(( counter++ ))`, or`(( counter-- ))`
 
-The`$`can be omitted in this case, as we are not retrieving the value. We will find the increment/decrement syntax handy in the examples on [loops](https://eric-lo.github.io/3150/3-Script/lab3.html#loop) later on.
+The`$`can be omitted in this case, as we are not retrieving the value. We will find the increment/decrement syntax handy in the examples on loops later on.
 
 ### Conditional statements, if ... then ... else ... {#conditional-statements-if-then-else-}
 
@@ -197,7 +197,7 @@ To summarize,`$(())`works when`A`is either a number or an arithmetic expression,
 * Greater than or equal,`-ge`
 * Greater than,`-gt`
 
-and you may refer to the [example on conditional statement](https://eric-lo.github.io/3150/3-Script/lab3.html#conditionex).
+and you may refer to the example on conditional statement.
 
 ##### Strings
 
@@ -487,7 +487,6 @@ files are accepted as input arguments. For each file, the script prints the tota
 
 1. How to print each matching phrase on a newline using`grep`?
 2. Write a script to output a summary on a set of files in csv format. The set of files are given as input arguments. Each line shows \(1\) the file name, \(2\) the total number of characters, \(3\) the total number of words, and \(4\) the total number of lines, in a file
-3. How to modify the script in this [example](https://eric-lo.github.io/3150/3-Script/lab3.html#ex4) to avoid trailing spaces being trimmed? \(or think about why the spaces are  "trimmed" in the first place? :\) \)
 
 ## Reference {#reference}
 
